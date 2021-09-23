@@ -9,8 +9,9 @@ namespace Condition
         /// </summary>        
         public static int Task1(int n)
         {
-            //TODO :Delete line below and write your own solution 
-            throw new NotImplementedException();
+            if (n>0) return n*n;
+            else if (n<0) return Math.Abs(n);
+            else return 0;
         }
 
         /// <summary>
