@@ -19,8 +19,21 @@ namespace Condition
         /// </summary>  
         public static int Task2(int n)
         {
-            //TODO :Delete  line  below and write your own solution 
-            throw new NotImplementedException();
+            int[] count = new int[10];
+            String str = n.ToString();
+            for (int i = 0; i < str.Length; i++)
+                count[str[i] - '0']++;
+            int result = 0, multiplier = 1;
+            for (int i = 0; i <= 9; i++)
+            {
+                while (count[i] > 0)
+                {
+                    result = result + (i * multiplier);
+                    count[i]--;
+                    multiplier = multiplier * 10;
+                }
+            }
+            return result;
         }
     }
 }
